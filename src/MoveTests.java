@@ -19,12 +19,10 @@ public class MoveTests {
             ArrayList<Move> moves = test.moveList();
             int i = 1;
             for(Move m : moves){
-                System.out.println(m.toString());
-                /*
-                System.out.println("Possible Move " + i);
+                System.out.println("\nPossible Move " + i);
                 State newMove = test.move(m);
-                System.out.println(newMove.print());
-                */
+                System.out.print(newMove.print());
+                System.out.println(m.toString());
                 i++;
             }
         }

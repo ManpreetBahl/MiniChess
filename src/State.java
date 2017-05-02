@@ -304,9 +304,9 @@ public class State {
                             if(move == 'B'){
                                 dir = -1;
                             }
-                            scan(moves, piece, x, y, -1, dir, 0, true);
-                            scan(moves, piece, x, y, 1, dir, 0, true);
-                            scan(moves, piece, x, y, 0, dir, -1, true);
+                            scan(moves, piece, x, y, -1, dir, 0, false);
+                            scan(moves, piece, x, y, 1, dir, 0, false);
+                            scan(moves, piece, x, y, 0, dir, -1, false);
                             break;
                         default:
                             throw new IllegalStateException("Invalid piece on the board");
