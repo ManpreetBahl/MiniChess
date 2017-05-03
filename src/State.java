@@ -149,13 +149,15 @@ public class State {
 
     //Moves based on a string format
     public State move(String mov){
-        //Decode the move of format a1-b2
-        char fCol = mov.charAt(0);
-        int fRow = Character.getNumericValue(mov.charAt(1));
-        char tCol = mov.charAt(3);
-        int tRow = Character.getNumericValue(mov.charAt(4));
-
-        return null;
+        //Get a list of legal moves
+        ArrayList<Move> moves = moveList();
+        //Compare the move string for each move with the parameter
+        for(Move m : moves){
+            if(m.toString().equals(mov)){
+                return move(m);
+            }
+        }
+        throw new IllegalArgumentException("Invalid move string detected!");
     }
 
 
@@ -239,7 +241,7 @@ public class State {
                 break;
             }
             moves.add(new Move(new Square(r, c), new Square(row, col)));
-        }while(stopShort);
+        }while(!stopShort);
     }
 
     /*====================================================
@@ -279,21 +281,21 @@ public class State {
                     //Convert it to lower case for shorter switch case
                     switch(Character.toLowerCase(piece)){
                         case 'k':
-                            symmscan(moves, piece, x, y, 0, 1, 1, false);
-                            symmscan(moves, piece, x, y, 1, 1, 1, false);
-                            break;
-                        case 'q':
-                            symmscan(moves, piece, x, y, 0 ,1, 1, true);
+                            symmscan(moves, piece, x, y, 0, 1, 1, true);
                             symmscan(moves, piece, x, y, 1, 1, 1, true);
                             break;
+                        case 'q':
+                            symmscan(moves, piece, x, y, 0 ,1, 1, false);
+                            symmscan(moves, piece, x, y, 1, 1, 1, false);
+                            break;
                         case 'r':
-                            symmscan(moves, piece, x, y, 0, 1, 1, true);
+                            symmscan(moves, piece, x, y, 0, 1, 1, false);
                             break;
                         case 'b':
                             //Bad bishop, can move N, S, E, W by 1 space but can't capture
-                            symmscan(moves, piece, x, y, 0, 1, -1, false);
+                            symmscan(moves, piece, x, y, 0, 1, -1, true);
                             //Normal bishop rules
-                            symmscan(moves, piece, x, y, 1, 1, 1, true);
+                            symmscan(moves, piece, x, y, 1, 1, 1, false);
                             break;
                         case 'n':
                             symmscan(moves, piece, x, y, 1, 2, 1, true);
@@ -304,9 +306,13 @@ public class State {
                             if(move == 'B'){
                                 dir = -1;
                             }
-                            scan(moves, piece, x, y, -1, dir, 0, false);
-                            scan(moves, piece, x, y, 1, dir, 0, false);
-                            scan(moves, piece, x, y, 0, dir, -1, false);
+                            //scan(moves, piece, x, y, -1, dir,0, true);
+                            scan(moves, piece, x, y, -dir, -1,0, true);
+                            //scan(moves, piece, x, y, 1, dir, 0, true);
+                            scan(moves, piece, x, y, -dir, 1, 0, true);
+                            scan(moves, piece, x, y, -dir, 0, -1, true);
+                            //scan(moves, piece, x, y, 0, dir, -1, true);
+
                             break;
                         default:
                             throw new IllegalStateException("Invalid piece on the board");
