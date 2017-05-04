@@ -2,215 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e30a8e2-e708-4fe7-adf9-e78000b35c7e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/loss-no-moves.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/king-vs-king.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/king-vs-king.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/loss-no-moves.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/promote-and-capture.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/promote-and-capture.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-1.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-1.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-10.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-10.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-100.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-100.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-11.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-11.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-12.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-12.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-13.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-13.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-14.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-14.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-15.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-15.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-16.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-16.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-17.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-17.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-18.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-18.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-19.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-19.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-2.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-2.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-20.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-20.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-21.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-21.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-22.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-22.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-23.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-23.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-24.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-24.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-25.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-25.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-26.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-26.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-27.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-27.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-28.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-28.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-29.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-29.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-3.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-3.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-30.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-30.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-31.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-31.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-32.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-32.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-33.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-33.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-34.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-34.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-35.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-35.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-36.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-36.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-37.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-37.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-38.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-38.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-39.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-39.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-4.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-4.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-40.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-40.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-41.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-41.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-42.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-42.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-43.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-43.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-44.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-44.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-45.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-45.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-46.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-46.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-47.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-47.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-48.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-48.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-49.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-49.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-5.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-5.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-50.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-50.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-51.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-51.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-52.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-52.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-53.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-53.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-54.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-54.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-55.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-55.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-56.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-56.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-57.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-57.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-58.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-58.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-59.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-59.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-6.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-6.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-60.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-60.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-61.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-61.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-62.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-62.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-63.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-63.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-64.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-64.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-65.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-65.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-66.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-66.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-67.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-67.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-68.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-68.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-69.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-69.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-7.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-7.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-70.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-70.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-71.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-71.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-72.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-72.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-73.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-73.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-74.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-74.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-75.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-75.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-76.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-76.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-77.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-77.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-78.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-78.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-79.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-79.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-8.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-8.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-80.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-80.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-81.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-81.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-82.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-82.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-83.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-83.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-84.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-84.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-85.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-85.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-86.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-86.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-87.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-87.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-88.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-88.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-89.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-89.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-9.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-9.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-90.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-90.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-91.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-91.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-92.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-92.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-93.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-93.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-94.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-94.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-95.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-95.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-96.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-96.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-97.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-97.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-98.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-98.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-99.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-99.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HumanPlayer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RandomSelf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MiniChess/State.class" afterPath="$PROJECT_DIR$/out/production/MiniChess/State.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/State.java" afterPath="$PROJECT_DIR$/src/State.java" />
     </list>
@@ -231,49 +22,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="State.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/State.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1721">
-              <caret line="90" column="29" lean-forward="false" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+            <state relative-caret-position="322">
+              <caret line="466" column="17" lean-forward="false" selection-start-line="466" selection-start-column="17" selection-end-line="466" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HumanPlayer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/HumanPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RandomSelf.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RandomSelf.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MoveTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MoveTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1734">
-              <caret line="109" column="9" lean-forward="false" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -309,9 +65,9 @@
         <option value="$PROJECT_DIR$/src/Square.java" />
         <option value="$PROJECT_DIR$/moveTests/genTest2" />
         <option value="$PROJECT_DIR$/src/MoveTests.java" />
-        <option value="$PROJECT_DIR$/src/State.java" />
         <option value="$PROJECT_DIR$/src/RandomSelf.java" />
         <option value="$PROJECT_DIR$/src/HumanPlayer.java" />
+        <option value="$PROJECT_DIR$/src/State.java" />
       </list>
     </option>
   </component>
@@ -683,12 +439,26 @@
       <option name="project" value="LOCAL" />
       <updated>1493784342976</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added game over logic as well as Human Player and RandomSelf player for testing">
+      <created>1493857858998</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1493857858998</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added basic evaluator for current game state">
+      <created>1493864724583</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1493864724583</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -705,7 +475,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30332828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30332828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -746,7 +516,9 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Started debugging pawn movements." />
     <MESSAGE value="Move generator passes all of move tests given by Bart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move generator passes all of move tests given by Bart" />
+    <MESSAGE value="Added game over logic as well as Human Player and RandomSelf player for testing" />
+    <MESSAGE value="Added basic evaluator for current game state" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic evaluator for current game state" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1168,16 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1721">
-          <caret line="90" column="29" lean-forward="false" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RandomSelf.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -1190,10 +952,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HumanPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="68">
           <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="466" column="17" lean-forward="false" selection-start-line="466" selection-start-column="17" selection-end-line="466" selection-end-column="17" />
+          <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>

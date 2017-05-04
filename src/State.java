@@ -442,4 +442,28 @@ public class State {
             throw new IllegalStateException("Invalid move while evaluating game state!");
         }
     }
+
+    //Negamax algorithm
+    public int negamax(State s, int depth){
+        /*
+        if s is a final state or d ≤ 0
+            return score(s)
+        M ← legal moves from s
+        extract some move m from M
+        s′ ← m(s)
+        v′ ← -(negamax(s′, d - 1))
+        for m in remaining moves of M
+            s′ ← m(s)
+            v ← -(negamax(s′, d - 1))
+            v′ ← max(v′, v)
+        return v′
+         */
+        if (s.over || depth <= 0){
+            return s.eval();
+        }
+        ArrayList<Move>moves = s.moveList();
+
+
+        return 0;
+    }
 }
