@@ -363,4 +363,83 @@ public class State {
         }
         return moves;
     }
+
+    public int eval(){
+        int blackScore = 0, whiteScore = 0;
+        boolean blackKingGone = true, whiteKingGone = true;
+
+        for(char[]row : board){
+            for(char piece : row){
+                //If it's not a piece, just continue
+                if(piece == '.'){
+                    continue;
+                }
+                switch(piece){
+                    case 'p':
+                        blackScore += 100;
+                        break;
+                    case 'P':
+                        whiteScore += 100;
+                        break;
+                    case 'b':
+                        blackScore += 300;
+                        break;
+                    case 'B':
+                        whiteScore += 300;
+                        break;
+                    case 'n':
+                        blackScore += 300;
+                        break;
+                    case 'N':
+                        whiteScore += 300;
+                        break;
+                    case 'r':
+                        blackScore += 500;
+                        break;
+                    case 'R':
+                        whiteScore += 500;
+                        break;
+                    case 'q':
+                        blackScore += 900;
+                        break;
+                    case 'Q':
+                        whiteScore += 900;
+                        break;
+                    case 'k':
+                        blackKingGone = false;
+                        break;
+                    case 'K':
+                        whiteKingGone = false;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        //Black king has been captured
+        if(blackKingGone){
+            if(move == 'B'){
+                return -10000;
+            }
+            return 10000;
+        }
+        //White king is gone
+        else if(whiteKingGone){
+            if(move == 'W'){
+                return -10000;
+            }
+            return 10000;
+        }
+
+        if(move == 'W'){
+            return whiteScore - blackScore;
+        }
+        else if(move == 'B'){
+            return blackScore - whiteScore;
+        }
+        else{
+            throw new IllegalStateException("Invalid move while evaluating game state!");
+        }
+    }
 }
