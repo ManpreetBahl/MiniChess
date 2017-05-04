@@ -364,7 +364,7 @@ public class State {
         return moves;
     }
 
-    public int eval(){
+    public float eval(){
         int blackScore = 0, whiteScore = 0;
         boolean blackKingGone = true, whiteKingGone = true;
 
@@ -444,7 +444,7 @@ public class State {
     }
 
     //Negamax algorithm
-    public int negamax(State s, int depth){
+    public float negamax(State s, int depth){
         /*
         if s is a final state or d ≤ 0
             return score(s)
@@ -463,7 +463,15 @@ public class State {
         }
         ArrayList<Move>moves = s.moveList();
 
+        //Extract some move m from M
+        State newState = move(moves.get(0)); //Get the first 1 for now
 
-        return 0;
+        float value = -(negamax(newState, depth - 1));
+        for(int i = 1; i < moves.size(); i++){
+            newState = move(moves.get(i));
+            float v = -(negamax(newState, depth - 1));
+            value = Float.max(value, v);
+        }
+        return value;
     }
 }
