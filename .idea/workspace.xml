@@ -2,10 +2,216 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e30a8e2-e708-4fe7-adf9-e78000b35c7e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MiniChess/MoveTests.class" afterPath="$PROJECT_DIR$/out/production/MiniChess/MoveTests.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/loss-no-moves.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/king-vs-king.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/king-vs-king.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/loss-no-moves.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/promote-and-capture.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/promote-and-capture.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-1.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-1.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-10.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-10.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-100.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-100.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-11.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-11.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-12.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-12.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-13.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-13.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-14.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-14.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-15.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-15.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-16.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-16.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-17.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-17.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-18.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-18.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-19.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-19.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-2.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-2.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-20.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-20.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-21.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-21.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-22.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-22.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-23.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-23.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-24.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-24.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-25.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-25.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-26.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-26.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-27.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-27.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-28.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-28.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-29.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-29.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-3.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-3.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-30.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-30.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-31.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-31.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-32.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-32.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-33.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-33.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-34.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-34.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-35.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-35.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-36.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-36.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-37.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-37.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-38.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-38.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-39.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-39.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-4.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-4.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-40.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-40.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-41.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-41.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-42.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-42.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-43.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-43.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-44.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-44.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-45.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-45.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-46.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-46.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-47.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-47.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-48.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-48.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-49.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-49.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-5.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-5.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-50.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-50.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-51.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-51.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-52.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-52.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-53.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-53.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-54.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-54.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-55.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-55.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-56.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-56.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-57.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-57.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-58.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-58.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-59.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-59.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-6.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-6.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-60.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-60.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-61.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-61.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-62.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-62.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-63.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-63.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-64.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-64.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-65.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-65.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-66.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-66.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-67.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-67.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-68.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-68.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-69.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-69.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-7.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-7.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-70.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-70.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-71.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-71.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-72.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-72.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-73.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-73.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-74.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-74.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-75.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-75.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-76.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-76.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-77.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-77.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-78.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-78.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-79.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-79.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-8.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-8.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-80.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-80.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-81.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-81.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-82.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-82.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-83.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-83.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-84.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-84.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-85.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-85.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-86.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-86.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-87.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-87.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-88.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-88.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-89.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-89.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-9.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-9.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-90.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-90.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-91.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-91.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-92.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-92.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-93.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-93.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-94.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-94.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-95.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-95.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-96.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-96.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-97.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-97.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-98.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-98.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-99.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genmoves-tests/random-99.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HumanPlayer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RandomSelf.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MiniChess/State.class" afterPath="$PROJECT_DIR$/out/production/MiniChess/State.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MoveTests.java" afterPath="$PROJECT_DIR$/src/MoveTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/State.java" afterPath="$PROJECT_DIR$/src/State.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,8 +234,8 @@
       <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/State.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="314" column="0" lean-forward="false" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="0" />
+            <state relative-caret-position="-1721">
+              <caret line="90" column="29" lean-forward="false" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,14 +243,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoveTests.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MoveTests.java">
+      <file leaf-file-name="HumanPlayer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HumanPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="109" column="9" lean-forward="true" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+            <state relative-caret-position="119">
+              <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RandomSelf.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RandomSelf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoveTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MoveTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1734">
+              <caret line="109" column="9" lean-forward="false" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,8 +308,10 @@
         <option value="$PROJECT_DIR$/moveTests/genTest1" />
         <option value="$PROJECT_DIR$/src/Square.java" />
         <option value="$PROJECT_DIR$/moveTests/genTest2" />
-        <option value="$PROJECT_DIR$/src/State.java" />
         <option value="$PROJECT_DIR$/src/MoveTests.java" />
+        <option value="$PROJECT_DIR$/src/State.java" />
+        <option value="$PROJECT_DIR$/src/RandomSelf.java" />
+        <option value="$PROJECT_DIR$/src/HumanPlayer.java" />
       </list>
     </option>
   </component>
@@ -105,7 +336,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -134,8 +364,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -147,7 +378,7 @@
       <recent name="C:\Users\Manpreet\Documents\Computer Science\Advanced AI\MiniChess\moveTests" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MoveTests">
+  <component name="RunManager" selected="Application.HumanPlayer">
     <configuration default="false" name="StateTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="StateTest" />
@@ -166,6 +397,36 @@
     <configuration default="false" name="MoveTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="MoveTests" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="MiniChess" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="HumanPlayer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="HumanPlayer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="MiniChess" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="RandomSelf" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="RandomSelf" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -382,14 +643,18 @@
       <listeners />
       <method />
     </configuration>
-    <list size="2">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.StateTest" />
       <item index="1" class="java.lang.String" itemvalue="Application.MoveTests" />
+      <item index="2" class="java.lang.String" itemvalue="Application.HumanPlayer" />
+      <item index="3" class="java.lang.String" itemvalue="Application.RandomSelf" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.MoveTests" />
-        <item index="1" class="java.lang.String" itemvalue="Application.StateTest" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.HumanPlayer" />
+        <item index="1" class="java.lang.String" itemvalue="Application.RandomSelf" />
+        <item index="2" class="java.lang.String" itemvalue="Application.MoveTests" />
+        <item index="3" class="java.lang.String" itemvalue="Application.StateTest" />
       </list>
     </recent_temporary>
   </component>
@@ -411,12 +676,19 @@
       <option name="project" value="LOCAL" />
       <updated>1493699974304</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Move generator passes all of move tests given by Bart">
+      <created>1493784342976</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1493784342976</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -429,12 +701,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29425114" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30332828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -446,6 +717,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -473,18 +745,11 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Started debugging pawn movements." />
-    <option name="LAST_COMMIT_MESSAGE" value="Started debugging pawn movements." />
+    <MESSAGE value="Move generator passes all of move tests given by Bart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move generator passes all of move tests given by Bart" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/State.java</url>
-          <line>308</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
@@ -494,31 +759,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/StateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moveTests/kingMoves">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Move.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="57" lean-forward="false" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
           <folding>
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -537,10 +784,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -557,8 +801,8 @@
         <state relative-caret-position="357">
           <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -577,10 +821,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -597,8 +838,8 @@
         <state relative-caret-position="357">
           <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -617,10 +858,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -637,8 +875,8 @@
         <state relative-caret-position="357">
           <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -657,10 +895,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -677,8 +912,8 @@
         <state relative-caret-position="357">
           <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -697,10 +932,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -717,8 +949,8 @@
         <state relative-caret-position="357">
           <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -737,10 +969,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -757,8 +986,8 @@
         <state relative-caret-position="357">
           <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -777,10 +1006,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -797,8 +1023,8 @@
         <state relative-caret-position="357">
           <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -817,10 +1043,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -865,7 +1088,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -882,8 +1104,8 @@
         <state relative-caret-position="220">
           <caret line="27" column="53" lean-forward="false" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
           <folding>
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -892,7 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,7 +1121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,7 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,7 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,17 +1149,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="314" column="0" lean-forward="false" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -956,9 +1162,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MoveTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="109" column="9" lean-forward="true" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+        <state relative-caret-position="1734">
+          <caret line="109" column="9" lean-forward="false" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1721">
+          <caret line="90" column="29" lean-forward="false" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
           <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RandomSelf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HumanPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>

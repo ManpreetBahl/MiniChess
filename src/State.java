@@ -13,6 +13,12 @@ public class State {
 
     //Keep track of the turn count
     protected int turn;
+
+    //Determine if game is over
+    protected boolean over;
+
+    //Keep track of who won
+    protected char winner;
     //===================================================
 
     //===================METHODS=========================
@@ -54,10 +60,16 @@ public class State {
 
         //First turn
         turn = 1;
+
+        //Game is not over
+        over = false;
+
+        //No winner
+        winner = '?';
     }
 
     //Copy Constructor
-    public State(char[][]newBoard, char move, int turn){
+    public State(char[][]newBoard, char move, int turn, boolean over, char winner){
         //Initialize board size to matching board size
         board = new char[newBoard.length][newBoard[0].length];
         //Make deep copy of the board
@@ -71,6 +83,12 @@ public class State {
 
         //Set turn count
         this.turn = turn;
+
+        //Set game over state
+        this.over = over;
+
+        //Set winner
+        this.winner = winner;
     }
 
     //Prints the current board state
@@ -116,16 +134,17 @@ public class State {
     //Returns an updated state after a move has been made
     public State move(Move mov){
         //Get the piece at the from Square
-        char piece = board[mov.from.x][mov.from.y];
+        char source = board[mov.from.x][mov.from.y];
+        char dest = board[mov.to.x][mov.to.y];
 
         //Check if there's a piece at the from square and belongs to current player
-        if(piece != '.' && pieceColor(piece) == move){
+        if(source != '.' && pieceColor(source) == move){
             //Create a new state with current values
-            State newState = new State(board, move, turn);
+            State newState = new State(board, move, turn, over, winner);
 
             //Move the piece and handle any pawn promotions if need be
             newState.board[mov.from.x][mov.from.y] = '.';
-            newState.board[mov.to.x][mov.to.y] = promotePawn(piece, mov.to.x);
+            newState.board[mov.to.x][mov.to.y] = promotePawn(source, mov.to.x);
 
             //Update whose turn it is as well as the turn count
             switch(newState.move){
@@ -138,6 +157,32 @@ public class State {
                     break;
                 default:
                     throw new IllegalStateException("Invalid player! Player can only be (W)hite or (B)lack!");
+            }
+
+            //Check the 40 turn limit
+            if(newState.turn > 40){
+                newState.over = true;
+                newState.winner = 'D'; //The game is a draw
+            }
+            //Check if the player can make a move
+            else if(newState.moveList().isEmpty()){
+                newState.over = true;
+                newState.winner = move; //Current player has won
+            }
+            //Check for king capture
+            else{
+                switch(dest){
+                    //White wins in the case of black king capture
+                    case 'k':
+                        newState.over = true;
+                        newState.winner = 'W';
+                        break;
+                    //Black wins in the case of white king capture
+                    case 'K':
+                        newState.over = true;
+                        newState.winner = 'B';
+                        break;
+                }
             }
             return newState;
         }
@@ -306,13 +351,9 @@ public class State {
                             if(move == 'B'){
                                 dir = -1;
                             }
-                            //scan(moves, piece, x, y, -1, dir,0, true);
                             scan(moves, piece, x, y, -dir, -1,0, true);
-                            //scan(moves, piece, x, y, 1, dir, 0, true);
                             scan(moves, piece, x, y, -dir, 1, 0, true);
                             scan(moves, piece, x, y, -dir, 0, -1, true);
-                            //scan(moves, piece, x, y, 0, dir, -1, true);
-
                             break;
                         default:
                             throw new IllegalStateException("Invalid piece on the board");
