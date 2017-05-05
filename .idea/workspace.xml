@@ -25,8 +25,8 @@
       <file leaf-file-name="State.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/State.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="463" column="44" lean-forward="true" selection-start-line="463" selection-start-column="44" selection-end-line="463" selection-end-column="44" />
+            <state relative-caret-position="408">
+              <caret line="468" column="42" lean-forward="true" selection-start-line="468" selection-start-column="42" selection-end-line="468" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,7 +93,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -122,6 +121,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -460,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493865018769</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finished first version of negamax implementation">
+      <created>1493926573316</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1493926573316</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -481,7 +488,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30786687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31240544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -526,7 +533,8 @@
     <MESSAGE value="Added game over logic as well as Human Player and RandomSelf player for testing" />
     <MESSAGE value="Added basic evaluator for current game state" />
     <MESSAGE value="Started negamax implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started negamax implementation" />
+    <MESSAGE value="Finished first version of negamax implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished first version of negamax implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -971,8 +979,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/State.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="463" column="44" lean-forward="true" selection-start-line="463" selection-start-column="44" selection-end-line="463" selection-end-column="44" />
+        <state relative-caret-position="408">
+          <caret line="468" column="42" lean-forward="true" selection-start-line="468" selection-start-column="42" selection-end-line="468" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

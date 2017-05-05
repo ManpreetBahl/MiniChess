@@ -364,7 +364,7 @@ public class State {
         return moves;
     }
 
-    public float eval(){
+    public int eval(){
         int blackScore = 0, whiteScore = 0;
         boolean blackKingGone = true, whiteKingGone = true;
 
@@ -443,21 +443,8 @@ public class State {
         }
     }
 
-    //Negamax algorithm
-    public float negamax(State s, int depth){
-        /*
-        if s is a final state or d ≤ 0
-            return score(s)
-        M ← legal moves from s
-        extract some move m from M
-        s′ ← m(s)
-        v′ ← -(negamax(s′, d - 1))
-        for m in remaining moves of M
-            s′ ← m(s)
-            v ← -(negamax(s′, d - 1))
-            v′ ← max(v′, v)
-        return v′
-         */
+    //Negamax algorithm with alpha beta pruning
+    public int negamax(State s, int depth, int alpha, int beta){
         if (s.over || depth <= 0){
             return s.eval();
         }
@@ -466,11 +453,20 @@ public class State {
         //Extract some move m from M
         State newState = move(moves.get(0)); //Get the first 1 for now
 
-        float value = -(negamax(newState, depth - 1));
+        int value = -(negamax(newState, depth - 1, -beta, -alpha));
+        if(value > beta){
+            return value;
+        }
+        alpha = Integer.max(alpha, value);
+
         for(int i = 1; i < moves.size(); i++){
             newState = move(moves.get(i));
-            float v = -(negamax(newState, depth - 1));
-            value = Float.max(value, v);
+            int v = -(negamax(newState, depth - 1, -beta, -alpha));
+            if(v >= beta){
+                return v;
+            }
+            value = Integer.max(value, v);
+            alpha = Integer.max(alpha, v);
         }
         return value;
     }
