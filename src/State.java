@@ -1,3 +1,5 @@
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 import java.util.ArrayList;
 /**
@@ -451,7 +453,7 @@ public class State {
         ArrayList<Move>moves = s.moveList();
 
         //Extract some move m from M
-        State newState = move(moves.get(0)); //Get the first 1 for now
+        State newState = s.move(moves.get(0)); //Get the first 1 for now=======================
 
         int value = -(negamax(newState, depth - 1, -beta, -alpha));
         if(value > beta){
@@ -460,7 +462,7 @@ public class State {
         alpha = Integer.max(alpha, value);
 
         for(int i = 1; i < moves.size(); i++){
-            newState = move(moves.get(i));
+            newState = s.move(moves.get(i));
             int v = -(negamax(newState, depth - 1, -beta, -alpha));
             if(v >= beta){
                 return v;
@@ -469,5 +471,52 @@ public class State {
             alpha = Integer.max(alpha, v);
         }
         return value;
+    }
+
+    public MoveInfo bestMove(){
+        //Get list of all possible moves
+        ArrayList<Move> m = moveList();
+        int moveSize = m.size();
+
+        //Arraylist to maintain state and score of such moves
+        ArrayList<MoveInfo> info = new ArrayList<MoveInfo>();
+
+        //Execute each move and evaluate the score. Add the info to the Info List
+        for (int i = 0; i < moveSize; i++) {
+            MoveInfo newMove = new MoveInfo();
+            newMove.move = m.get(i);
+            newMove.state = move(newMove.move);
+            newMove.score = newMove.state.eval();
+            if(newMove.score == 10000){ //Game is over
+                return newMove;
+            }
+            info.add(newMove);
+        }
+
+        //Sort based on the score
+        Collections.sort(info, (m1, m2) -> Integer.compare(m2.score, m1.score));
+
+        //Set current best move to the first in the sorted move list
+        MoveInfo best = info.get(0);
+
+        //Depth
+        for(int i = 1; i < 3; i++){ //Set to 3 for testing purposes
+            int bestScore = -10000;
+
+            for(int j = 1; j < moveSize; j++){
+                MoveInfo current = info.get(j);
+                int score = negamax(current.state, i, -10000, 10000);
+
+                if(score == 10000){ //Game winner or losser, just return that move
+                    return current;
+                }
+
+                if(score > bestScore){
+                    best = current;
+                }
+            }
+        }
+
+        return best;
     }
 }
