@@ -499,19 +499,20 @@ public class State {
         //Set current best move to the first in the sorted move list
         MoveInfo best = info.get(0);
 
-        //Depth
-        for(int i = 1; i < 3; i++){ //Set to 3 for testing purposes
+        //Negaxmax search
+        for(int i = 1; i < 4; i++){ //Set to 3 for testing purposes
             int bestScore = -10000;
 
             for(int j = 1; j < moveSize; j++){
                 MoveInfo current = info.get(j);
                 int score = negamax(current.state, i, -10000, 10000);
 
-                if(score == 10000){ //Game winner or losser, just return that move
+                if(score == 10000){ //Game winner, just return that move
                     return current;
                 }
 
                 if(score > bestScore){
+                    //bestScore = score;
                     best = current;
                 }
             }
