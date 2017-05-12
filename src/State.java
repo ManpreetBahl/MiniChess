@@ -1,7 +1,6 @@
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
-import java.util.ArrayList;
+import java.net.CookieHandler;
+import java.util.*;
+
 /**
  * Created by Manpreet on 4/3/2017.
  */
@@ -377,6 +376,12 @@ public class State {
                     continue;
                 }
                 switch(piece){
+                    case 'k':
+                        blackKingGone = false;
+                        break;
+                    case 'K':
+                        whiteKingGone = false;
+                        break;
                     case 'p':
                         blackScore += 100;
                         break;
@@ -406,12 +411,6 @@ public class State {
                         break;
                     case 'Q':
                         whiteScore += 900;
-                        break;
-                    case 'k':
-                        blackKingGone = false;
-                        break;
-                    case 'K':
-                        whiteKingGone = false;
                         break;
                     default:
                         break;
@@ -450,20 +449,28 @@ public class State {
         if (s.over || depth <= 0){
             return s.eval();
         }
+
+        //For all possible moves, generate all possible states
         ArrayList<Move>moves = s.moveList();
+        int moveCount = moves.size();
+        ArrayList<State> newStates = new ArrayList<>();
 
-        //Extract some move m from M
-        State newState = s.move(moves.get(0)); //Get the first 1 for now=======================
+        for(int i = 0; i < moveCount; i++){
+            newStates.add(s.move(moves.get(i)));
+        }
 
-        int value = -(negamax(newState, depth - 1, -beta, -alpha));
+        //Shuffle arraylist then sort by piece evaluation
+        Collections.shuffle(newStates);
+        Collections.sort(newStates, (m1, m2) -> Integer.compare(m2.eval(), m1.eval()));
+
+        int value = -(negamax(newStates.get(0), depth - 1, -beta, -alpha));
         if(value > beta){
             return value;
         }
         alpha = Integer.max(alpha, value);
 
-        for(int i = 1; i < moves.size(); i++){
-            newState = s.move(moves.get(i));
-            int v = -(negamax(newState, depth - 1, -beta, -alpha));
+        for(int i = 1; i < moveCount; i++){
+            int v = -(negamax(newStates.get(i), depth - 1, -beta, -alpha));
             if(v >= beta){
                 return v;
             }
@@ -472,6 +479,8 @@ public class State {
         }
         return value;
     }
+
+
 
     public MoveInfo bestMove(){
         //Get list of all possible moves
@@ -494,13 +503,14 @@ public class State {
         }
 
         //Sort based on the score
+        Collections.shuffle(info);
         Collections.sort(info, (m1, m2) -> Integer.compare(m2.score, m1.score));
 
         //Set current best move to the first in the sorted move list
         MoveInfo best = info.get(0);
 
         //Negaxmax search
-        for(int i = 1; i < 4; i++){ //Set to 3 for testing purposes
+        for(int i = 1; i < 5; i++){ //Set to 3 for testing purposes
             int bestScore = -10000;
 
             for(int j = 1; j < moveSize; j++){
@@ -508,6 +518,7 @@ public class State {
                 int score = negamax(current.state, i, -10000, 10000);
 
                 if(score == 10000){ //Game winner, just return that move
+                    over = true;
                     return current;
                 }
 
@@ -517,7 +528,6 @@ public class State {
                 }
             }
         }
-
         return best;
     }
 }
