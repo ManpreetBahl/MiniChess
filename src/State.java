@@ -25,10 +25,10 @@ public class State {
     protected long startTime;
 
     //Elapsed Time
-    protected long elapsedTime;
+    protected double elapsedTime;
 
     //Time Limit
-    protected long timeLimit;
+    protected double timeLimit;
 
     //===================================================
 
@@ -480,7 +480,7 @@ public class State {
 
     //Negamax algorithm with alpha beta pruning
     public int negamax(State s, int depth, int alpha, int beta){
-        elapsedTime = (System.nanoTime() - startTime);
+        elapsedTime = (System.nanoTime() - startTime) * 1e-9;
         if (s.over || depth <= 0 || elapsedTime >= timeLimit){
             return s.eval();
         }
@@ -549,7 +549,7 @@ public class State {
         //Negaxmax search
         int depth = 0; //Starting depth
         ArrayList<MoveInfo>bestMoves = new ArrayList<>(); //Overall best moves that can be made
-        elapsedTime = (System.nanoTime() - startTime); //Elapsed time
+        elapsedTime = (System.nanoTime() - startTime) * 1e-9; //Elapsed time
 
         while(elapsedTime < timeLimit){
             //Keep track of current best moves for current depth
