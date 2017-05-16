@@ -465,12 +465,12 @@ public class State {
         }
         else{
             if(move == 'W'){
-                //return whiteScore - blackScore;
-                return whiteScore;
+                return whiteScore - blackScore;
+                //return whiteScore;
             }
             else if(move == 'B'){
-                //return blackScore - whiteScore;
-                return blackScore;
+                return blackScore - whiteScore;
+                //return blackScore;
             }
             else{
                 throw new IllegalStateException("Invalid move while evaluating game state!");
@@ -559,11 +559,12 @@ public class State {
 
             for(int j = 1; j < moveSize; j++){
                 MoveInfo current = info.get(j);
-                current.score = negamax(current.state, depth, -10000, 10000);
+                current.score = -negamax(current.state, depth, -10000, 10000);
 
                 if(current.score == 10000){ //Game winner, just return that move
                     return current;
                 }
+
 
                 if(current.score > bestScore){ //Better move has been found
                     bestScore = current.score; //Set best score to that value
@@ -571,8 +572,7 @@ public class State {
                     currentBest.add(current); //Add the new move
                     //best = current;
                 }
-
-                if(current.score == bestScore){
+                else if(current.score == bestScore){
                     currentBest.add(current);
                 }
             }

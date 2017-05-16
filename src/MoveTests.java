@@ -18,7 +18,6 @@ public class MoveTests {
         String filename;
         ArrayList<String>errors = new ArrayList<>();
 
-
         try{
             String newBoard = new String(Files.readAllBytes(Paths.get("moveTests/kingCapture")));
             test.read(newBoard);
@@ -36,6 +35,11 @@ public class MoveTests {
                 System.out.println(s.print());
                 System.out.println("Score: " + s.eval() + "\tWinner: " + s.winner);
             }
+
+            MoveInfo best = test.bestMove();
+            System.out.println("Best Move: " + best.move);
+            System.out.println("Best Move State: " + best.state.print());
+
         }
         catch(IOException e){
             System.out.println("Unable to read file");

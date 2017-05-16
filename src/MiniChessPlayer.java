@@ -13,8 +13,8 @@ public class MiniChessPlayer {
     //Fields
     private static String server = "imcs.svcs.cs.pdx.edu";
     private static String port = "3589";
-    private static String username = "TheLegend27";
-    private static String password = "password";
+    private static String username = "TheLegend28";
+    private static String password = "EpicPassword";
 
     private static Client con = null;
 
