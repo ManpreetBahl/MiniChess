@@ -1,7 +1,6 @@
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
-import java.util.ArrayList;
+import java.net.CookieHandler;
+import java.util.*;
+import java.lang.System;
 /**
  * Created by Manpreet on 4/3/2017.
  */
@@ -21,6 +20,16 @@ public class State {
 
     //Keep track of who won
     protected char winner;
+
+    //Start Search Time
+    protected long startTime;
+
+    //Elapsed Time
+    protected double elapsedTime;
+
+    //Time Limit
+    protected double timeLimit;
+
     //===================================================
 
     //===================METHODS=========================
@@ -68,10 +77,19 @@ public class State {
 
         //No winner
         winner = '?';
+
+        //Start time is 0
+        startTime = 0;
+
+        //Elapsed time is also 0
+        elapsedTime = 0;
+
+        //Time limit for move
+        timeLimit = 5;
     }
 
     //Copy Constructor
-    public State(char[][]newBoard, char move, int turn, boolean over, char winner){
+    public State(char[][]newBoard, char move, int turn, boolean over, char winner, long startTime){
         //Initialize board size to matching board size
         board = new char[newBoard.length][newBoard[0].length];
         //Make deep copy of the board
@@ -91,6 +109,16 @@ public class State {
 
         //Set winner
         this.winner = winner;
+
+        //Start time
+        this.startTime = startTime;
+
+        //Elapsed time
+        this.elapsedTime = 0;
+
+        //Time limit
+        this.timeLimit = 5;
+
     }
 
     //Prints the current board state
@@ -142,7 +170,7 @@ public class State {
         //Check if there's a piece at the from square and belongs to current player
         if(source != '.' && pieceColor(source) == move){
             //Create a new state with current values
-            State newState = new State(board, move, turn, over, winner);
+            State newState = new State(board, move, turn, over, winner, 0);
 
             //Move the piece and handle any pawn promotions if need be
             newState.board[mov.from.x][mov.from.y] = '.';
@@ -166,7 +194,7 @@ public class State {
                 newState.over = true;
                 newState.winner = 'D'; //The game is a draw
             }
-            //Check if the player can make a move
+            //Check if the player can't make a move
             else if(newState.moveList().isEmpty()){
                 newState.over = true;
                 newState.winner = move; //Current player has won
@@ -377,6 +405,12 @@ public class State {
                     continue;
                 }
                 switch(piece){
+                    case 'k':
+                        blackKingGone = false;
+                        break;
+                    case 'K':
+                        whiteKingGone = false;
+                        break;
                     case 'p':
                         blackScore += 100;
                         break;
@@ -407,12 +441,6 @@ public class State {
                     case 'Q':
                         whiteScore += 900;
                         break;
-                    case 'k':
-                        blackKingGone = false;
-                        break;
-                    case 'K':
-                        whiteKingGone = false;
-                        break;
                     default:
                         break;
                 }
@@ -421,6 +449,7 @@ public class State {
 
         //Black king has been captured
         if(blackKingGone){
+            //System.out.println("Black king gone! Move: " + move);
             if(move == 'B'){
                 return -10000;
             }
@@ -428,42 +457,55 @@ public class State {
         }
         //White king is gone
         else if(whiteKingGone){
+            //System.out.println("White king gone! Move: " + move);
             if(move == 'W'){
                 return -10000;
             }
             return 10000;
         }
-
-        if(move == 'W'){
-            return whiteScore - blackScore;
-        }
-        else if(move == 'B'){
-            return blackScore - whiteScore;
-        }
         else{
-            throw new IllegalStateException("Invalid move while evaluating game state!");
+            if(move == 'W'){
+                return whiteScore - blackScore;
+                //return whiteScore;
+            }
+            else if(move == 'B'){
+                return blackScore - whiteScore;
+                //return blackScore;
+            }
+            else{
+                throw new IllegalStateException("Invalid move while evaluating game state!");
+            }
         }
     }
 
     //Negamax algorithm with alpha beta pruning
     public int negamax(State s, int depth, int alpha, int beta){
-        if (s.over || depth <= 0){
+        elapsedTime = (System.nanoTime() - startTime) * 1e-9;
+        if (s.over || depth <= 0 || elapsedTime >= timeLimit){
             return s.eval();
         }
+
+        //For all possible moves, generate all possible states
         ArrayList<Move>moves = s.moveList();
+        int moveCount = moves.size();
+        ArrayList<State> newStates = new ArrayList<>();
 
-        //Extract some move m from M
-        State newState = s.move(moves.get(0)); //Get the first 1 for now=======================
+        for(int i = 0; i < moveCount; i++){
+            newStates.add(s.move(moves.get(i)));
+        }
 
-        int value = -(negamax(newState, depth - 1, -beta, -alpha));
+        //Shuffle arraylist then sort by piece evaluation
+        Collections.shuffle(newStates);
+        Collections.sort(newStates, (m1, m2) -> Integer.compare(m2.eval(), m1.eval()));
+
+        int value = -(negamax(newStates.get(0), depth - 1, -beta, -alpha));
         if(value > beta){
             return value;
         }
         alpha = Integer.max(alpha, value);
 
-        for(int i = 1; i < moves.size(); i++){
-            newState = s.move(moves.get(i));
-            int v = -(negamax(newState, depth - 1, -beta, -alpha));
+        for(int i = 1; i < moveCount; i++){
+            int v = -(negamax(newStates.get(i), depth - 1, -beta, -alpha));
             if(v >= beta){
                 return v;
             }
@@ -473,7 +515,11 @@ public class State {
         return value;
     }
 
+
     public MoveInfo bestMove(){
+        //Get start time for search
+        startTime = System.nanoTime();
+
         //Get list of all possible moves
         ArrayList<Move> m = moveList();
         int moveSize = m.size();
@@ -486,7 +532,7 @@ public class State {
             MoveInfo newMove = new MoveInfo();
             newMove.move = m.get(i);
             newMove.state = move(newMove.move);
-            newMove.score = newMove.state.eval();
+            newMove.score = -(newMove.state.eval());
             if(newMove.score == 10000){ //Game is over
                 return newMove;
             }
@@ -494,29 +540,56 @@ public class State {
         }
 
         //Sort based on the score
+        Collections.shuffle(info);
         Collections.sort(info, (m1, m2) -> Integer.compare(m2.score, m1.score));
 
         //Set current best move to the first in the sorted move list
         MoveInfo best = info.get(0);
 
-        //Depth
-        for(int i = 1; i < 3; i++){ //Set to 3 for testing purposes
+        //Negaxmax search
+        int depth = 0; //Starting depth
+        ArrayList<MoveInfo>bestMoves = new ArrayList<>(); //Overall best moves that can be made
+        elapsedTime = (System.nanoTime() - startTime) * 1e-9; //Elapsed time
+
+        while(elapsedTime < timeLimit){
+            //Keep track of current best moves for current depth
+            ArrayList<MoveInfo>currentBest = new ArrayList<>();
             int bestScore = -10000;
+            depth++;
 
             for(int j = 1; j < moveSize; j++){
                 MoveInfo current = info.get(j);
-                int score = negamax(current.state, i, -10000, 10000);
+                current.score = -negamax(current.state, depth, -10000, 10000);
 
-                if(score == 10000){ //Game winner or losser, just return that move
+                if(current.score == 10000){ //Game winner, just return that move
                     return current;
                 }
 
-                if(score > bestScore){
-                    best = current;
+
+                if(current.score > bestScore){ //Better move has been found
+                    bestScore = current.score; //Set best score to that value
+                    currentBest.clear(); //Clear current best moves of any previous moves
+                    currentBest.add(current); //Add the new move
+                    //best = current;
                 }
+                else if(current.score == bestScore){
+                    currentBest.add(current);
+                }
+            }
+
+            //There's time to possible make another search so save current results
+            if(elapsedTime < timeLimit){
+                bestMoves.clear(); //Clear the list of best moves so that the updated results can be added
+                bestMoves.addAll(currentBest);
             }
         }
 
+        //If there's a list of best possible moves, pick a random one
+        if(bestMoves.size() > 0){
+            Random rand = new Random();
+            int index = rand.nextInt(bestMoves.size());
+            best = bestMoves.get(index);
+        }
         return best;
     }
 }

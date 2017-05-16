@@ -18,6 +18,35 @@ public class MoveTests {
         String filename;
         ArrayList<String>errors = new ArrayList<>();
 
+        try{
+            String newBoard = new String(Files.readAllBytes(Paths.get("moveTests/kingCapture")));
+            test.read(newBoard);
+
+            //Get list of moves and store the readable moves in arraylist
+            ArrayList<Move> moves = test.moveList();
+            ArrayList<String> result = new ArrayList<>();
+            ArrayList<State> states = new ArrayList<>();
+            for(Move m : moves){
+                result.add(m.toString());
+                states.add(test.move(m));
+            }
+            //System.out.println(result);
+            for(State s: states){
+                System.out.println(s.print());
+                System.out.println("Score: " + s.eval() + "\tWinner: " + s.winner);
+            }
+
+            MoveInfo best = test.bestMove();
+            System.out.println("Best Move: " + best.move);
+            System.out.println("Best Move State: " + best.state.print());
+
+        }
+        catch(IOException e){
+            System.out.println("Unable to read file");
+            System.exit(-1);
+        }
+
+
         for(int i = 0; i < 3; i++){
             switch (i){
                 case 0:

@@ -7,11 +7,13 @@ public class NegamaxPlayer {
         while(!board.over){
             System.out.println(board.print());
 
+            //MoveInfo test = board.bestMove();
             MoveInfo test = board.bestMove();
             board = test.state;
-            System.out.println(board.move + " Score: " + test.score);
+            //System.out.println(board.move + " Score: " + test.score);
         }
 
+        System.out.println("Winning board: " + board.print());
         switch (board.winner) {
             case 'W':
                 System.out.println("Game over! The winner is White!");
