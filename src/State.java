@@ -33,8 +33,6 @@ public class State {
 
     //===================================================
 
-    //===================METHODS=========================
-
     /*====================================================
     This function is the default constructor for a State
     Params:
@@ -136,7 +134,6 @@ public class State {
 
         //Time limit
         this.timeLimit = 6;
-
     }
 
     /*====================================================
@@ -295,10 +292,10 @@ public class State {
 
 
     /*====================================================
-   This function determines the color of a given piece.
-   Params:
+    This function determines the color of a given piece.
+    Params:
        1) Piece: A character representing the piece.
-   Returns:
+    Returns:
        1) 'W' or 'B' indicating that the piece is either white or black.
    ====================================================*/
     public char pieceColor(char piece){
@@ -638,7 +635,6 @@ public class State {
 
         //Set current best move to the first in the sorted move list
         MoveInfo best = info.get(0);
-        //MoveInfo best = null;
 
         //Negaxmax search
         int depth = 0; //Starting depth
@@ -676,8 +672,6 @@ public class State {
                 bestMoves.addAll(currentBest);
             }
         }
-
-        //System.out.println("Depth: " + depth);
 
         //If there's a list of best possible moves, pick a random one
         if(bestMoves.size() > 0){

@@ -12,9 +12,6 @@ public class Square {
     protected int y;
     //===================================================
 
-
-    //===================METHODS=========================
-
     /*===================================
     * Constructor
     * Params:
@@ -25,8 +22,14 @@ public class Square {
         this.x = x;
         this.y = y;
     }
-    //===================================================
 
+    /*===================================
+    * This function returns the location of the board coordinates.
+    * Params:
+        1) None.
+    * Returns:
+    *   1) String indicating the location of the square.
+    ===================================*/
     public String toString(){
         switch(y){
             case 0:
