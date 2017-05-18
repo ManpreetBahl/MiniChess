@@ -85,7 +85,7 @@ public class State {
         elapsedTime = 0;
 
         //Time limit for move
-        timeLimit = 5;
+        timeLimit = 6;
     }
 
     //Copy Constructor
@@ -117,7 +117,7 @@ public class State {
         this.elapsedTime = 0;
 
         //Time limit
-        this.timeLimit = 5;
+        this.timeLimit = 6;
 
     }
 
@@ -398,8 +398,9 @@ public class State {
         int blackScore = 0, whiteScore = 0;
         boolean blackKingGone = true, whiteKingGone = true;
 
-        for(char[]row : board){
-            for(char piece : row){
+        for(int i = 0; i < board.length; i++){
+            for(int j = 0; j < board[i].length; j++){
+                char piece = board[i][j];
                 //If it's not a piece, just continue
                 if(piece == '.'){
                     continue;
@@ -412,38 +413,78 @@ public class State {
                         whiteKingGone = false;
                         break;
                     case 'p':
-                        blackScore += 100;
+                        blackScore += 1000;
                         break;
                     case 'P':
-                        whiteScore += 100;
+                        whiteScore += 1000;
                         break;
                     case 'b':
-                        blackScore += 300;
+                        blackScore += 3000;
                         break;
                     case 'B':
-                        whiteScore += 300;
+                        whiteScore += 3000;
                         break;
                     case 'n':
-                        blackScore += 300;
+                        blackScore += 3000;
                         break;
                     case 'N':
-                        whiteScore += 300;
+                        whiteScore += 3000;
                         break;
                     case 'r':
-                        blackScore += 500;
+                        blackScore += 5000;
                         break;
                     case 'R':
-                        whiteScore += 500;
+                        whiteScore += 5000;
                         break;
                     case 'q':
-                        blackScore += 900;
+                        blackScore += 9000;
                         break;
                     case 'Q':
-                        whiteScore += 900;
+                        whiteScore += 9000;
                         break;
                     default:
                         break;
                 }
+                /*
+                //Give bonus points for having pieces in the center of the board
+                if (i > 1 && i < 4) {
+                    if (j > 0 && j < 4) {
+                        if (move == 'W') {
+                            if (Character.isUpperCase(piece)) {
+                                whiteScore += 50;
+                            } else {
+                                whiteScore -= 50;
+                            }
+                        } else {
+                            if (Character.isLowerCase(piece)) {
+                                blackScore += 50;
+                            } else {
+                                blackScore -= 50;
+                            }
+                        }
+                    }
+                }
+                */
+                /*
+                // Add value to advanced pawns.
+                if (i > 0 && i < 5) {
+                    if (piece == 'P') {
+                        int modifier = i - 1;
+                        if (move == 'W') {
+                            whiteScore += (100 * modifier);
+                        } else {
+                            whiteScore -= (100 * modifier);
+                        }
+                    } else if (piece == 'p') {
+                        int modifier = 4 - i;
+                        if (move == 'B') {
+                            blackScore += (100 * modifier);
+                        } else {
+                            blackScore -= (100 * modifier);
+                        }
+                    }
+                }
+                */
             }
         }
 
@@ -451,17 +492,17 @@ public class State {
         if(blackKingGone){
             //System.out.println("Black king gone! Move: " + move);
             if(move == 'B'){
-                return -10000;
+                return -500000;
             }
-            return 10000;
+            return 500000;
         }
         //White king is gone
         else if(whiteKingGone){
             //System.out.println("White king gone! Move: " + move);
             if(move == 'W'){
-                return -10000;
+                return -500000;
             }
-            return 10000;
+            return 500000;
         }
         else{
             if(move == 'W'){
@@ -525,7 +566,7 @@ public class State {
         int moveSize = m.size();
 
         //Arraylist to maintain state and score of such moves
-        ArrayList<MoveInfo> info = new ArrayList<MoveInfo>();
+        ArrayList<MoveInfo> info = new ArrayList<>();
 
         //Execute each move and evaluate the score. Add the info to the Info List
         for (int i = 0; i < moveSize; i++) {
@@ -533,7 +574,7 @@ public class State {
             newMove.move = m.get(i);
             newMove.state = move(newMove.move);
             newMove.score = -(newMove.state.eval());
-            if(newMove.score == 10000){ //Game is over
+            if(newMove.score == 500000){ //Game is over
                 return newMove;
             }
             info.add(newMove);
@@ -545,6 +586,7 @@ public class State {
 
         //Set current best move to the first in the sorted move list
         MoveInfo best = info.get(0);
+        //MoveInfo best = null;
 
         //Negaxmax search
         int depth = 0; //Starting depth
@@ -554,17 +596,16 @@ public class State {
         while(elapsedTime < timeLimit){
             //Keep track of current best moves for current depth
             ArrayList<MoveInfo>currentBest = new ArrayList<>();
-            int bestScore = -10000;
+            int bestScore = -500000;
             depth++;
 
-            for(int j = 1; j < moveSize; j++){
+            for(int j = 0; j < moveSize; j++){
                 MoveInfo current = info.get(j);
-                current.score = -negamax(current.state, depth, -10000, 10000);
+                current.score = -negamax(current.state, depth, -500000, 500000);
 
-                if(current.score == 10000){ //Game winner, just return that move
+                if(current.score == 500000){ //Game winner, just return that move
                     return current;
                 }
-
 
                 if(current.score > bestScore){ //Better move has been found
                     bestScore = current.score; //Set best score to that value
@@ -583,6 +624,8 @@ public class State {
                 bestMoves.addAll(currentBest);
             }
         }
+
+        //System.out.println("Depth: " + depth);
 
         //If there's a list of best possible moves, pick a random one
         if(bestMoves.size() > 0){

@@ -22,6 +22,7 @@ public class MoveTests {
             String newBoard = new String(Files.readAllBytes(Paths.get("moveTests/kingCapture")));
             test.read(newBoard);
 
+            /*
             //Get list of moves and store the readable moves in arraylist
             ArrayList<Move> moves = test.moveList();
             ArrayList<String> result = new ArrayList<>();
@@ -35,10 +36,11 @@ public class MoveTests {
                 System.out.println(s.print());
                 System.out.println("Score: " + s.eval() + "\tWinner: " + s.winner);
             }
-
+            */
             MoveInfo best = test.bestMove();
             System.out.println("Best Move: " + best.move);
             System.out.println("Best Move State: " + best.state.print());
+            System.out.println("Best Move Score: " + best.score);
 
         }
         catch(IOException e){
