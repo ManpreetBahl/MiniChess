@@ -3,6 +3,7 @@ import java.util.*;
 import java.lang.System;
 /**
  * Created by Manpreet on 4/3/2017.
+ * This file describes a board state.
  */
 public class State {
     //===================FIELDS==========================
@@ -34,7 +35,13 @@ public class State {
 
     //===================METHODS=========================
 
-    //Default Constructor
+    /*====================================================
+    This function is the default constructor for a State
+    Params:
+        1) None
+    Returns:
+        1) Initialized State
+    ====================================================*/
     public State(){
         //Creates a 5 x 6 board
         board = new char[6][5];
@@ -84,11 +91,22 @@ public class State {
         //Elapsed time is also 0
         elapsedTime = 0;
 
-        //Time limit for move
+        //Time limit for move (6 seconds)
         timeLimit = 6;
     }
 
-    //Copy Constructor
+    /*====================================================
+    This function creates a State object based on the parameters passed in. Essentially a copy constructor.
+    Params:
+        1) Board: The board of the state to copy.
+        2) Move: Whose move is it.
+        3) Turn: Current turn count.
+        4) Over: Is the game over?
+        5) Winner: Who is the winner?
+        6) Start time: The start time for iterative deepening.
+    Returns:
+        1) State object.
+    ====================================================*/
     public State(char[][]newBoard, char move, int turn, boolean over, char winner, long startTime){
         //Initialize board size to matching board size
         board = new char[newBoard.length][newBoard[0].length];
@@ -121,10 +139,18 @@ public class State {
 
     }
 
-    //Prints the current board state
+    /*====================================================
+    This function returns a string of the current board state.
+    Params:
+        1) None.
+    Returns:
+        1) String containing the current board state.
+    ====================================================*/
     public String print(){
+        //The first line is turn count followed by whose move it is
         String boardState = turn + " " + move + "\n";
 
+        //Get the board state and append to the string
         for (char[] row : board){
             boardState += String.valueOf(row) + "\n";
         }
@@ -132,14 +158,23 @@ public class State {
         return boardState;
     }
 
-    //Update board with new board state
+    /*====================================================
+    This function updates the board based on the new string board passed in as the parameter.
+    Params:
+        1) New Board: What to set the current board to.
+    Returns:
+        1) None
+    ====================================================*/
     public void read(String newBoard){
+        //Use a scanner to parse the new board string
         Scanner scan = new Scanner(newBoard);
 
+        //Update turn and move
         turn = Integer.parseInt(scan.next());
         move = scan.next().charAt(0);
         scan.nextLine();
 
+        //Update the board
         for(int i = 0; scan.hasNextLine(); i++){
             String row = scan.nextLine();
             for(int j = 0; j < board[i].length; j++){
@@ -148,20 +183,36 @@ public class State {
         }
     }
 
-    //Handles the pawn promotion when moving a piece
+    /*====================================================
+    This function handles the pawn promotion to a Queen.
+    Params:
+        1) Piece: The piece to check.
+        2) Row: What row is the piece in.
+    Returns:
+        1) Character containing the promoted piece or the original piece if it was not a pawn.
+    ====================================================*/
     public char promotePawn(char piece, int row){
+        //White pawn
         if(piece == 'P' && move == 'W' && row == 0){
             return 'Q';
         }
+        //Black pawn
         else if(piece == 'p' && move == 'B' && row == 5){
             return 'q';
         }
+        //Not a pawn
         else{
             return piece;
         }
     }
 
-    //Returns an updated state after a move has been made
+    /*====================================================
+    This function returns a new State after making a move and updating the current State values.
+    Params:
+        1) Mov: Move object containing the move to make on the current state.
+    Returns:
+        1) Updated State object.
+    ====================================================*/
     public State move(Move mov){
         //Get the piece at the from Square
         char source = board[mov.from.x][mov.from.y];
@@ -183,7 +234,7 @@ public class State {
                     break;
                 case 'B':
                     newState.move = 'W';
-                    newState.turn++;
+                    newState.turn++; //Increment turn count
                     break;
                 default:
                     throw new IllegalStateException("Invalid player! Player can only be (W)hite or (B)lack!");
@@ -220,16 +271,23 @@ public class State {
             throw new IllegalArgumentException("Invalid move detected!");
         }
     }
-    //===================================================
 
-    //Moves based on a string format
+    /*====================================================
+    This function returns a new State after making a move which is passed in as a string. It also checks if the move
+    passed in is a legal move.
+    Params:
+        1) Mov: String of the move (in the format a1-b1)
+    Returns:
+        1) Updated State after the move.
+    ====================================================*/
     public State move(String mov){
         //Get a list of legal moves
         ArrayList<Move> moves = moveList();
+
         //Compare the move string for each move with the parameter
         for(Move m : moves){
             if(m.toString().equals(mov)){
-                return move(m);
+                return move(m); //Make the move if it's legal and return the state
             }
         }
         throw new IllegalArgumentException("Invalid move string detected!");
@@ -273,18 +331,18 @@ public class State {
         return false;
     }
 
-
     /*====================================================
     This function generates a move list by scanning how far the chosen piece can go in a certain direction.
     Params:
-        1) Piece: A character representing the piece.
-        2) Row: Starting row position.
-        3) Col: Starting col position.
-        4) dRow: Row direction to scan.
-        5) dCol: Col direction to scan.
-        6) Capture: Indicate whether it can capture, not capture, or capture only.
+        1) Moves: The movelist where any legal moves are added to it.
+        2) Piece: A character representing the piece.
+        3) Row: Starting row position.
+        4) Col: Starting col position.
+        5) dRow: Row direction to scan.
+        6) dCol: Col direction to scan.
+        7) Capture: Indicate whether it can capture, not capture, or capture only.
             -1 for capture means false, 0 for capture means capture only, 1 for capture means can capture
-        7) stopShort
+        8) stopShort
     Returns:
         1) None.
     ====================================================*/
@@ -322,22 +380,22 @@ public class State {
     /*====================================================
     This function tries all four rotational symmetries of a given scan.
     Params:
-        1) Piece: A character representing the piece.
-        2) Row: Starting row position.
-        3) Col: Starting col position.
-        4) dRow: Row direction to scan.
-        5) dCol: Col direction to scan.
-        6) Capture: Indicate whether it can capture, not capture, or capture only.
+        1) Moves: The movelist where any legal moves are added to it.
+        2) Piece: A character representing the piece.
+        3) Row: Starting row position.
+        4) Col: Starting col position.
+        5) dRow: Row direction to scan.
+        6) dCol: Col direction to scan.
+        7) Capture: Indicate whether it can capture, not capture, or capture only.
             -1 for capture means false, 0 for capture means capture only, 1 for capture means can capture
-        7) stopShort
+        8) stopShort
     Returns:
         1) Arraylist of possible moves.
     ====================================================*/
     public void symmscan(ArrayList<Move> moves, char piece, int row, int col, int dRow, int dCol, int capture, boolean stopShort){
         for(int i = 0; i < 4; i++){
             scan(moves, piece, row, col, dRow, dCol, capture, stopShort);
-            //Exchange dx with dy
-            //Code obtained from http://javarevisited.blogspot.com/2013/02/swap-two-numbers-without-third-temp-variable-java-program-example-tutorial.html
+            //Exchange dx with dy using the properties of XOR
             dRow = dRow ^ dCol;
             dCol = dRow ^ dCol;
             dRow = dRow ^ dCol;
@@ -347,36 +405,44 @@ public class State {
         }
     }
 
+    /*====================================================
+    This function generates a movelist which contains all possible moves that the current State can do.
+    Params:
+        1) None.
+    Returns:
+        1) Arraylist of legal moves that can be made.
+    ====================================================*/
     public ArrayList<Move> moveList(){
         ArrayList<Move> moves = new ArrayList<>();
+        //Iterate through the board
         for(int x = 0; x < board.length; x++){
             for(int y = 0; y < board[x].length; y++){
                 char piece = board[x][y];
                 if(piece != '.' && pieceColor(piece) == move){
                     //Convert it to lower case for shorter switch case
                     switch(Character.toLowerCase(piece)){
-                        case 'k':
+                        case 'k': //King
                             symmscan(moves, piece, x, y, 0, 1, 1, true);
                             symmscan(moves, piece, x, y, 1, 1, 1, true);
                             break;
-                        case 'q':
+                        case 'q': //Queen
                             symmscan(moves, piece, x, y, 0 ,1, 1, false);
                             symmscan(moves, piece, x, y, 1, 1, 1, false);
                             break;
-                        case 'r':
+                        case 'r': //Rook
                             symmscan(moves, piece, x, y, 0, 1, 1, false);
                             break;
-                        case 'b':
+                        case 'b': //Bishop
                             //Bad bishop, can move N, S, E, W by 1 space but can't capture
                             symmscan(moves, piece, x, y, 0, 1, -1, true);
                             //Normal bishop rules
                             symmscan(moves, piece, x, y, 1, 1, 1, false);
                             break;
-                        case 'n':
+                        case 'n': //Knight
                             symmscan(moves, piece, x, y, 1, 2, 1, true);
                             symmscan(moves, piece, x, y, -1, 2, 1, true);
                             break;
-                        case 'p':
+                        case 'p': //Pawn
                             int dir = 1;
                             if(move == 'B'){
                                 dir = -1;
@@ -394,10 +460,18 @@ public class State {
         return moves;
     }
 
+    /*====================================================
+    This function evaluates the current state and returns a score.
+    Params:
+        1) None.
+    Returns:
+        1) Integer scoring the current state based on pieces and whose turn it is.
+    ====================================================*/
     public int eval(){
         int blackScore = 0, whiteScore = 0;
         boolean blackKingGone = true, whiteKingGone = true;
 
+        //Iterate through the board
         for(int i = 0; i < board.length; i++){
             for(int j = 0; j < board[i].length; j++){
                 char piece = board[i][j];
@@ -406,112 +480,69 @@ public class State {
                     continue;
                 }
                 switch(piece){
-                    case 'k':
+                    case 'k': //Black king
                         blackKingGone = false;
                         break;
-                    case 'K':
+                    case 'K': //White king
                         whiteKingGone = false;
                         break;
-                    case 'p':
+                    case 'p': //Black pawn
                         blackScore += 1000;
                         break;
-                    case 'P':
+                    case 'P': //White pawn
                         whiteScore += 1000;
                         break;
-                    case 'b':
+                    case 'b': //Black bishop
                         blackScore += 3000;
                         break;
-                    case 'B':
+                    case 'B': //White bishop
                         whiteScore += 3000;
                         break;
-                    case 'n':
+                    case 'n': //Black knight
                         blackScore += 3000;
                         break;
-                    case 'N':
+                    case 'N': //White knight
                         whiteScore += 3000;
                         break;
-                    case 'r':
+                    case 'r': //Black rook
                         blackScore += 5000;
                         break;
-                    case 'R':
+                    case 'R': //White rook
                         whiteScore += 5000;
                         break;
-                    case 'q':
+                    case 'q': //Black queen
                         blackScore += 9000;
                         break;
-                    case 'Q':
+                    case 'Q': //White queen
                         whiteScore += 9000;
                         break;
                     default:
                         break;
                 }
-                /*
-                //Give bonus points for having pieces in the center of the board
-                if (i > 1 && i < 4) {
-                    if (j > 0 && j < 4) {
-                        if (move == 'W') {
-                            if (Character.isUpperCase(piece)) {
-                                whiteScore += 50;
-                            } else {
-                                whiteScore -= 50;
-                            }
-                        } else {
-                            if (Character.isLowerCase(piece)) {
-                                blackScore += 50;
-                            } else {
-                                blackScore -= 50;
-                            }
-                        }
-                    }
-                }
-                */
-                /*
-                // Add value to advanced pawns.
-                if (i > 0 && i < 5) {
-                    if (piece == 'P') {
-                        int modifier = i - 1;
-                        if (move == 'W') {
-                            whiteScore += (100 * modifier);
-                        } else {
-                            whiteScore -= (100 * modifier);
-                        }
-                    } else if (piece == 'p') {
-                        int modifier = 4 - i;
-                        if (move == 'B') {
-                            blackScore += (100 * modifier);
-                        } else {
-                            blackScore -= (100 * modifier);
-                        }
-                    }
-                }
-                */
             }
         }
 
         //Black king has been captured
         if(blackKingGone){
-            //System.out.println("Black king gone! Move: " + move);
             if(move == 'B'){
-                return -500000;
+                return -500000; //Lose value
             }
-            return 500000;
+            return 500000; //Win value
         }
         //White king is gone
         else if(whiteKingGone){
-            //System.out.println("White king gone! Move: " + move);
             if(move == 'W'){
-                return -500000;
+                return -500000; //Lost value
             }
-            return 500000;
+            return 500000; //Win value
         }
         else{
+            //Return the difference between the two sides to determine which move has the greatest impact
             if(move == 'W'){
                 return whiteScore - blackScore;
-                //return whiteScore;
             }
             else if(move == 'B'){
                 return blackScore - whiteScore;
-                //return blackScore;
             }
             else{
                 throw new IllegalStateException("Invalid move while evaluating game state!");
@@ -519,9 +550,21 @@ public class State {
         }
     }
 
-    //Negamax algorithm with alpha beta pruning
+    /*====================================================
+    This function implements the alpha beta negamax search to determine the best score for the current side
+    Params:
+        1) State to evaluate.
+        2) Depth: How far in the game tree to search for best move.
+        3) Alpha
+        4) Beta
+    Returns:
+        1) Integer with the score of the best move.
+    ====================================================*/
     public int negamax(State s, int depth, int alpha, int beta){
+        //Take the time
         elapsedTime = (System.nanoTime() - startTime) * 1e-9;
+
+        //Base case (game is over, depth is reached, time has elapsed)
         if (s.over || depth <= 0 || elapsedTime >= timeLimit){
             return s.eval();
         }
@@ -539,12 +582,14 @@ public class State {
         Collections.shuffle(newStates);
         Collections.sort(newStates, (m1, m2) -> Integer.compare(m2.eval(), m1.eval()));
 
+        //Call negamax for the first best move based on score
         int value = -(negamax(newStates.get(0), depth - 1, -beta, -alpha));
         if(value > beta){
             return value;
         }
         alpha = Integer.max(alpha, value);
 
+        //Check the remaining moves
         for(int i = 1; i < moveCount; i++){
             int v = -(negamax(newStates.get(i), depth - 1, -beta, -alpha));
             if(v >= beta){
@@ -556,7 +601,14 @@ public class State {
         return value;
     }
 
-
+    /*====================================================
+    This function returns a MoveInfo object (object which maps the negamax score with a Move) containing the best move
+    to make given the search time and current state.
+    Params:
+        1) None.
+    Returns:
+        1) MoveInfo object containing the best move to make
+    ====================================================*/
     public MoveInfo bestMove(){
         //Get start time for search
         startTime = System.nanoTime();
@@ -580,7 +632,7 @@ public class State {
             info.add(newMove);
         }
 
-        //Sort based on the score
+        //Shuffle and sort based on the score
         Collections.shuffle(info);
         Collections.sort(info, (m1, m2) -> Integer.compare(m2.score, m1.score));
 
