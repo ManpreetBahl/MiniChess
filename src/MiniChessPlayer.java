@@ -246,11 +246,13 @@ public class MiniChessPlayer {
                     MoveInfo move = board.bestMove();
                     board = move.state;
                     con.sendMove(move.move.toString());
+                    System.out.println("My move: " + move.move.toString() + '\n' + board.print());
                 }
                 else{ //Wait for opponent's move
                     oppMove = con.getMove();
                     if(oppMove != null){
                         board = board.move(oppMove);
+                        System.out.println("Opponent's move: " + oppMove + '\n' + board.print());
                     }
                     else{
                         break;
@@ -262,11 +264,13 @@ public class MiniChessPlayer {
                     MoveInfo move = board.bestMove();
                     board = move.state;
                     con.sendMove(move.move.toString());
+                    System.out.println("My move: " + move.move.toString() + '\n' + board.print());
                 }
                 else{ //Wait for opponent's move
                     oppMove = con.getMove();
                     if(oppMove != null){
                         board = board.move(oppMove);
+                        System.out.println("Opponent's move: " + oppMove + '\n' + board.print());
                     }
                     else{
                         break;
