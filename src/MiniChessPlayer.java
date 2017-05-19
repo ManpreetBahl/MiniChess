@@ -238,6 +238,17 @@ public class MiniChessPlayer {
         1) None.
     ======================================================*/
     public static void playGame() throws IOException{
+        switch (color){
+            case 'W':
+                System.out.println("I am White! I will make the first move!");
+                break;
+            case 'B':
+                System.out.println("I am Black! Opponent makes the first move!");
+                break;
+            default:
+                throw new IllegalStateException("Invalid color!");
+        }
+
         State board = new State();
         String oppMove = "";
         while(!board.over){
