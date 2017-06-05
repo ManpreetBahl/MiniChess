@@ -1,139 +1,274 @@
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-
 import java.io.IOException;
-import java.text.CharacterIterator;
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.List;
 /**
  * Created by Manpreet on 5/13/2017.
+ * This file is the game player
  */
 public class MiniChessPlayer {
 
-    //Fields
+    //===================FIELDS===========================
+    //Server
     private static String server = "imcs.svcs.cs.pdx.edu";
-    private static String port = "3589";
-    private static String username = "TheLegend28";
-    private static String password = "EpicPassword";
 
+    //Port
+    private static int port = 3589;
+
+    //Username
+    private static String username = null;
+
+    //Password
+    private static String password = null;
+
+    //Client connection to the IMCS server
     private static Client con = null;
 
+    //Game ID
     private static String gameId = "";
+
+    //Player color
     private static char color = '?';
-    private static String opponent = "?";
 
-
+    //Scanner to read in input
     protected static Scanner scan = new Scanner(System.in);
+    //======================================================
 
+    /*======================================================
+    This function is the main function which starts the game
+    playing.
+    Params:
+        1) Args string array.
+    Returns:
+        1) None.
+    ======================================================*/
+    public static void main(String[]args){
+        try{
+            //Create client object
+            con = new Client(server, port);
 
-    public static void main(String[]args) throws IOException{
-        con = new Client(server, port, username, password);
-        menu();
-        con.close();
+            //Login in to the server
+            login();
+
+            //Display the game menu
+            menu();
+
+            //Close connection
+            con.close();
+        }
+        catch(IOException e){
+            System.out.println("Error occured!");
+            System.out.println(e.getStackTrace());
+        }
     }
 
-    public static void menu() throws IOException{
-        int input = 0;
-        System.out.println("=======================================================");
-        System.out.println("Welcome to MiniChess! Please select from the following:");
-        System.out.println("1: Offer an IMCS game");
-        System.out.println("2: Accept an IMCS game");
-        System.out.println("3: Quit");
-        //Get a valid input
-        while(true){
+    /*======================================================
+    This function handles the login to the IMCS server.
+    Params:
+        1) None.
+    Returns:
+        1) None.
+    ======================================================*/
+    public static void login() throws IOException{
+        while (true) {
+            //Get username
+            System.out.print("Enter username: ");
+            username = scan.nextLine();
+
+            //Get password
+            System.out.print("Enter password: ");
+            password = scan.nextLine();
+
+            //Attempt to connect to the server
             try{
-                System.out.print("Enter choice: ");
-                input = scan.nextInt();
-                switch(input){
-                    case 1: //Offer an IMCS game
-                        offerGame();
-                        break;
-                    case 2:
-                        scan.nextLine(); //Remove anything that may interfere with game
-                        acceptGame();
-                        break;
-                    case 3:
-                        System.out.println("Terminating program!");
-                        System.out.println("========================================================");
-                        System.exit(0);
-                        break;
-                    default:
-                        System.out.println("Invalid input!!");
-                        System.out.println("========================================================");
-                        break;
-                }
+                con.login(username, password);
+                //Successful login so break
                 break;
             }
-            catch(InputMismatchException e){
-                System.out.println("Invalid input! Please try again!");
-                scan.next();
+            catch (RuntimeException e){
+                System.out.println("Invalid credentials!");
             }
         }
     }
 
-    public static void offerGame() throws IOException{
-        //Get a valid input
+    /*======================================================
+    This function displays the game options once a successful login
+    has taken place. It allows to offer a game on the IMCS server or
+    to accept a game given a list of available Game IDS.
+    Params:
+        1) None.
+    Returns:
+        1) None.
+    ======================================================*/
+    public static void menu() throws IOException{
+        int input = 0;
+        try{
+            System.out.println("=======================================================");
+            System.out.println("Welcome to MiniChess! Please select from the following:");
+            System.out.println("1: Offer an IMCS game");
+            System.out.println("2: Accept an IMCS game");
+            System.out.println("3: Quit");
+            System.out.print("Enter choice: ");
+            input = scan.nextInt();
+            switch(input){
+                case 1: //Offer an IMCS game
+                    scan.nextLine();
+                    offerGame();
+                    break;
+                case 2: //Accepth an IMCS game
+                    scan.nextLine(); //Remove anything that may interfere with game
+                    acceptGame();
+                    break;
+                case 3: //Quit the program
+                    System.out.println("Terminating program!");
+                    System.out.println("========================================================");
+                    System.exit(0);
+                    break;
+                default: //Invalid option
+                    System.out.println("Invalid input!!");
+                    System.out.println("========================================================");
+                    break;
+            }
+        }
+        catch(InputMismatchException e){
+            System.out.println("Invalid input! Please try again!");
+            scan.next();
+        }
+    }
+
+    /*======================================================
+    This function allows the user to offer a game on the IMCS
+    server.
+    Params:
+        1) None.
+    Returns:
+        1) None.
+    ======================================================*/
+    public static void offerGame(){
         while(true){
             try{
+                //Select which color (or random) to offer the game as
+                System.out.println("========================OFFER===========================");
                 System.out.print("Offer as (W)hite, (B)lack, or (R)andom: ");
-                color = Character.toUpperCase(scan.next().charAt(0));
+                color = Character.toUpperCase(scan.nextLine().charAt(0));
                 System.out.println("========================================================");
                 switch (color){
-                    case 'W':
-                        color = con.offer('W');
+                    case 'W': //Offer as white
+                        con.offerGameAndWait('W');
                         break;
-                    case 'B':
-                        color = con.offer('B');
+                    case 'B': //Offer as black
+                        con.offerGameAndWait('B');
                         break;
-                    case 'R':
-                        color = con.offer('?');
+                    case 'R': //Let the server decide
+                        color = con.offerGameAndWait();
                         break;
                     default:
                         throw new IllegalArgumentException();
                 }
+                //Play the game once an offer has been accepted
                 playGame();
                 break;
             }
-            catch(InputMismatchException e){
-                System.out.println("Invalid input! Please try again!");
+            catch (IOException e){
+                System.out.println("Unable to offer game! Please try again!");
                 System.out.println("========================================================");
             }
-            catch(IllegalArgumentException f){
-                System.out.println("Invalid input! Please try again!");
+            catch (RuntimeException e){
+                System.out.println("Unable to offer game! Please try again!");
                 System.out.println("========================================================");
             }
         }
     }
 
-
-    public static void acceptGame() throws IOException{
+    /*======================================================
+    This function allows the user to accept a game based on a list of available games that is displayed
+    Params:
+        1) None.
+    Returns:
+        1) None.
+    ======================================================*/
+    public static void acceptGame(){
         while(true){
             try{
+                System.out.println("========================ACCEPT==========================");
+                //Get the list of games available
+                List<IMCSGame> available = con.getGameList();
+                if(available.size() == 0){
+                    System.out.println("No available games!");
+                    return;
+                }
+                else{
+                    System.out.println("Available games: ");
+                }
+
+                //Display list of games available
+                for (IMCSGame game: available) {
+                    if(!game.isRunning) {
+                        System.out.println(game.gameId + " " + game.reservedPlayer);
+                    }
+                }
+
+                //Get desired game ID from the user
                 System.out.print("Enter Game ID: ");
                 gameId = scan.nextLine();
                 System.out.println("========================================================");
-                color = con.accept(gameId, '?'); //Let the server decide what color I'll get for now==========
+
+                //Let the server decide the color
+                color = con.accept(gameId);
+                //Play the game
                 playGame();
+                break;
             }
             catch(IOException e){
                 System.out.println("Invalid game ID! Please try again!");
                 System.out.println("========================================================");
             }
+            catch (RuntimeException e){
+                System.out.println("Could not accept game! Please try another game!");
+                System.out.println("========================================================");
+            }
         }
     }
 
+    /*======================================================
+    This function plays the game of Minichess after a game has been accepted. It utilizes the alpha-negamax to
+    determine the best move and sends it over the server. It then waits for the move from the opponent.
+    Params:
+        1) None.
+    Returns:
+        1) None.
+    ======================================================*/
     public static void playGame() throws IOException{
+        switch (color){
+            case 'W':
+                System.out.println("I am White! I will make the first move!");
+                break;
+            case 'B':
+                System.out.println("I am Black! Opponent makes the first move!");
+                break;
+            default:
+                throw new IllegalStateException("Invalid color!");
+        }
+
         State board = new State();
+        String oppMove = "";
         while(!board.over){
             if(color == 'W'){ //My color is white
                 if(board.move == 'W'){ //Board turn is white's
                     MoveInfo move = board.bestMove();
                     board = move.state;
                     con.sendMove(move.move.toString());
+                    System.out.println("My move: " + move.move.toString() + '\n' + board.print());
                 }
                 else{ //Wait for opponent's move
-                    String oppMove = con.getMove();
-                    board = board.move(oppMove);
+                    oppMove = con.getMove();
+                    if(oppMove != null){
+                        board = board.move(oppMove);
+                        System.out.println("Opponent's move: " + oppMove + '\n' + board.print());
+                    }
+                    else{
+                        break;
+                    }
                 }
             }
             else{ //My color is black
@@ -141,26 +276,36 @@ public class MiniChessPlayer {
                     MoveInfo move = board.bestMove();
                     board = move.state;
                     con.sendMove(move.move.toString());
+                    System.out.println("My move: " + move.move.toString() + '\n' + board.print());
                 }
                 else{ //Wait for opponent's move
-                    String oppMove = con.getMove();
-                    board = board.move(oppMove);
+                    oppMove = con.getMove();
+                    if(oppMove != null){
+                        board = board.move(oppMove);
+                        System.out.println("Opponent's move: " + oppMove + '\n' + board.print());
+                    }
+                    else{
+                        break;
+                    }
                 }
             }
         }
-        switch (board.winner) {
-            case 'W':
-                System.out.println("Game over! The winner is White!");
-                break;
-            case 'B':
-                System.out.println("Game over! The winner is Black!");
-                break;
-            case 'D':
-                System.out.println("Game over! The game is a draw!");
-                break;
-            default:
-                throw new IllegalStateException("Something happened! Game is over but no winner?");
+
+        //Game is over so display the results
+        if(board.winner == color){ //Won the game
+            System.out.println("Game over! You won the match!");
+        }
+        else if(board.winner == 'D'){ //Game is a draw
+            System.out.println("Game over! The game is a draw!");
+        }
+        else if(oppMove == null){ //Some other message was received
+            System.out.println("Game over!");
+        }
+        else if(board.winner != color){ //Lost the game
+            System.out.println("Game over! You lost the match!");
+        }
+        else{
+            throw new IllegalStateException("Something happened! Game is over but no winner?");
         }
     }
-
 }
