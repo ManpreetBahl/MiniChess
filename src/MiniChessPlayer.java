@@ -112,6 +112,7 @@ public class MiniChessPlayer {
             input = scan.nextInt();
             switch(input){
                 case 1: //Offer an IMCS game
+                    scan.nextLine();
                     offerGame();
                     break;
                 case 2: //Accepth an IMCS game
